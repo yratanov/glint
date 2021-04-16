@@ -149,7 +149,7 @@ export interface SuperTableSignature<T> {
 export default class SuperTable<T> extends Component<SuperTableSignature<T>> {}
 ```
 
-```hbs
+```handlebars
 {{! app/components/super-table.hbs }}
 
 <table ...attributes>
@@ -198,7 +198,7 @@ export default class Greeting extends Component<GreetingSignature> {
 }
 ```
 
-```hbs
+```handlebars
 {{! app/components/greeting.hbs }}
 
 {{yield (concat @message ", " this.greetingTarget "!")}}
@@ -250,7 +250,7 @@ class MyComponent extends Component<MyComponentSignature> {
 
 Given a component like the one declared above, if you wrote this in some other component's template:
 
-```hbs
+```handlebars
 {{yield (hash
   foo=(component "my-component")
 )}}
