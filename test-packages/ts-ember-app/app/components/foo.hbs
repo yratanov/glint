@@ -3,6 +3,21 @@
 {{! @glint-expect-error: invalid property }}
 {{this.corge}}
 
+<canvas {{did-insert this.needsCanvas}}></canvas>
+<canvas {{did-insert this.needsAnyElement}}></canvas>
+<canvas {{did-insert this.needsNumber}}></canvas>
+<canvas {{did-insert (fn this.needsNumber 123)}}></canvas>
+
+<div {{did-insert this.needsCanvas}}></div>
+<div {{did-insert this.needsAnyElement}}></div>
+<div {{did-insert this.needsNumber}}></div>
+<div {{did-insert (fn this.needsNumber 123)}}></div>
+
+{{did-insert this.needsCanvas}}
+{{did-insert this.needsAnyElement}}
+{{did-insert this.needsNumber}}
+{{did-insert (fn this.needsNumber 123)}}
+
 <Bar @grault={{0}} />
 
 <Bar
